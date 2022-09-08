@@ -15,6 +15,8 @@
 #include "nnfusion/frontend/tensorflow_import/tensorflow.hpp"
 #include "nnfusion/frontend/torchscript_import/torchscript.hpp"
 #include "nnfusion/frontend/util/parameter.hpp"
+#include "nnfusion/frontend/stencil_import/graph_build.hpp"
+
 
 #include "nnfusion/engine/device/cuda.hpp"
 #include "nnfusion/engine/device/graphcore.hpp"
@@ -119,6 +121,12 @@ int main(int argc, char** argv)
     {
         // load tensorlfow model as graph
         graph = nnfusion::frontend::load_tensorflow_model(model);
+    }
+
+    if (format == "stencil")
+    {
+        auto graph_build = nnfusion::frontend::stencil_import::GraphBuild{};
+        graph = graph_build.get_graph();
     }
 #if TORCHSCRIPT_FRONTEND
     else if (format == "torchscript")

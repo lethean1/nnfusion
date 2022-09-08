@@ -10,4 +10,8 @@ if (TORCHSCRIPT_FRONTEND)
     add_subdirectory(torchscript_import)
 endif()
 
+if (STENCIL_FRONTEND)
+    add_subdirectory(stencil_import)
+endif()
+
 add_subdirectory(util)

@@ -21,6 +21,10 @@ if (TORCHSCRIPT_FRONTEND)
     target_link_libraries(nnfusion torchscript_import_interface torchscript_import frontend_util)
 endif()
 
+if (STENCIL_FRONTEND)
+    target_link_libraries(nnfusion stencil_import)
+endif()
+
 target_link_libraries(nnfusion nnfusion_backend nnfusion_engine_pass_graph nnfusion_operators gflags)
 
 add_custom_command(

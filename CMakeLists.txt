@@ -20,6 +20,7 @@ option(CODE_COVERAGE_ENABLE "Enable code coverage." FALSE)
 option(ONNX_FRONTEND "Enable ONNX frontend." TRUE)
 option(TENSORFLOW_FRONTEND "Enable Tensorflow frontend." TRUE)
 option(TORCHSCRIPT_FRONTEND "Enable TorchScript frontend." FALSE)
+option(STENCIL_FRONTEND "Enable stencil frontend." TRUE)
 
 #-----------------------------------------------------------------------------------------------
 # STEP.1 Customnized targets
