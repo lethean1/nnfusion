@@ -25,17 +25,17 @@ namespace nnfusion
                 auto generic_op_2 = std::make_shared<nnfusion::op::GenericOp>(
                     "hdiffsa_node_2",
                     "hdiffsa_flx", 
-                    myConfig);
+                    nnfusion::op::OpConfig::any{});
 
                 auto generic_op_3 = std::make_shared<nnfusion::op::GenericOp>(
                     "hdiffsa_node_3",
                     "hdiffsa_fly", 
-                    myConfig);
+                    nnfusion::op::OpConfig::any{});
 
                 auto generic_op_4 = std::make_shared<nnfusion::op::GenericOp>(
                     "hdiffsa_node_4",
                     "hdiffsa_out", 
-                    myConfig);
+                    nnfusion::op::OpConfig::any{});
 
                 std::vector<int> const_values_0;
                 std::vector<int> const_values_1;

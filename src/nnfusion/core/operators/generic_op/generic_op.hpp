@@ -230,7 +230,7 @@ namespace nnfusion
 
                 if (localOpConfig.f_translate != nullptr && !m_expression.size())
                 {
-                    m_expression = localOpConfig.f_translate(gnode);
+                    //m_expression = localOpConfig.f_translate(gnode);
                 }
             }
 
